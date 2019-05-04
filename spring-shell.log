@@ -1,0 +1,46 @@
+1556820871597:exit
+1556821754765:help
+1556821758056:exit
+1556824366685:help
+1556824371769:exit
+1556824430452:help
+1556824476740:print-all-messages
+1556824482704:send-message aaa
+1556824489633:print-all-messages
+1556828515616:help
+1556828524207:send-message aaa
+1556828873229:help
+1556828877648:send-message aaa
+1556829988204:send-message test
+1556830264266:send-message test2
+1556830318340:print-all-messages
+1556882206764:help
+1556882215209:create-user aaa bbb
+1556882249534:login user aaa bbb
+1556882258910:login-user aaa bbb
+1556882313653:help
+1556882318111:create-user aaa bbb
+1556882330844:login-user aaa bbb
+1556882549749:create-user aaa bbb
+1556882554003:login-user aaa bbb
+1556882657769:create-user aaa bbb
+1556882662473:login-user aaa bbb
+1556882694633:create-user aaa2 bbb
+1556882999184:create-user aaa bbb
+1556883006748:create-user aaa2 bbb
+1556883022508:login-user aaa bbb
+1556883034124:send-message from_aaa
+1556883042605:login-user aaa2 bbb
+1556883049759:send-message from_aaa2
+1556883490458:help
+1556884478328:create-user aaa bbb
+1556884538430:login-user aaa bbb
+1556884612928:login-user aaa bb2
+1556885134987:create-user shell_user qwerty
+1556885144367:login-user shell_user qwerty
+1556885155693:send-message first
+1556885162832:send-message second
+1556885170388:send-message third
+1556885173636:exit
+1556898961717:print-all-messages
+1556914169169:help
