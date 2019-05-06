@@ -1,0 +1,73 @@
+package com.yasoft.voting.models;
+
+public class InnerPoll {
+    private Long id;
+    private InnerUser user;
+    private String title;
+    private String text;
+    private int trueVotes;
+    private int falseVotes;
+
+    public InnerPoll() { }
+
+    public InnerPoll(Long id, InnerUser user, String title, String text, int trueVotes, int falseVotes) {
+        this.id = id;
+        this.user = user;
+        this.title = title;
+        this.text = text;
+        this.trueVotes = trueVotes;
+        this.falseVotes = falseVotes;
+    }
+
+    public InnerPoll(Poll dbPoll) {
+        this(dbPoll.getId(), new InnerUser(dbPoll.getUser()), dbPoll.getTitle(), dbPoll.getText(), dbPoll.getTrueVotes(), dbPoll.getFalseVotes());
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public InnerUser getUser() {
+        return user;
+    }
+
+    public void setUser(InnerUser user) {
+        this.user = user;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public int getTrueVotes() {
+        return trueVotes;
+    }
+
+    public void setTrueVotes(int trueVotes) {
+        this.trueVotes = trueVotes;
+    }
+
+    public int getFalseVotes() {
+        return falseVotes;
+    }
+
+    public void setFalseVotes(int falseVotes) {
+        this.falseVotes = falseVotes;
+    }
+}

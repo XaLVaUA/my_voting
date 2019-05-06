@@ -44,3 +44,104 @@
 1556885173636:exit
 1556898961717:print-all-messages
 1556914169169:help
+1557059306119:create-user ShellUser shell
+1557059315807:login-user ShellUser shell
+1557059339447:create-poll TitleText ContentText
+1557060742954:help
+1557060859848:create-user ShellUser shell
+1557060869324:login-user ShellUser shell
+1557060891777:create-poll PollTitle PollText
+1557060918074:answer-poll 1 true
+1557060940551:answer-poll 1
+1557060970770:answer-poll 1 1
+1557061111116:create-user aaa bbb
+1557061115250:login-user aaa bbb
+1557061124309:create-poll fff ggg
+1557061131947:answer-poll 1 1
+1557061145543:answer-poll 1,1
+1557061304972:answer-poll 1
+1557061591624:create-user aaa bbb
+1557061596394:log
+1557061602006:login-user aaa bbb
+1557061608307:create-poll rrr ttt
+1557061614099:answer-poll 1
+1557061623700:create-poll hhh jjj
+1557061627557:answer-poll 2
+1557061638737:send-message eee
+1557061646940:send-message kkk
+1557061654562:print-all-messages
+1557064394624:create-user a b
+1557064399534:login-user a b
+1557064407432:create-poll g h
+1557064415711:answer-poll 1
+1557064511047:create-user a b
+1557064515133:login user a b
+1557064524332:login-user a b
+1557064531149:create-poll p l
+1557064535938:answer-poll 1
+1557064712997:create-user a b
+1557064716255:login-user a b
+1557064720178:create-poll p l
+1557064724085:answer-poll 1
+1557064801426:create-user a b
+1557064807671:login-user a b
+1557064813252:create-poll p l
+1557064815801:a
+1557064819926:answer-poll 1
+1557066091237:create-user a b
+1557066097622:login-user a b
+1557066104143:send-message aaa
+1557066109226:print-all-messages
+1557066116056:create-poll p l
+1557066285166:help
+1557066290428:init-shell-user
+1557066303764:create-poll PollTitle PollText
+1557067451174:da
+1557067683245:hekp
+1557067685374:help
+1557067696400:login
+1557067701493:login-user fidl pa
+1557069333226:init-shell-user
+1557069360314:create-poll PollTitle1 PollTextds
+1557069370451:create-poll asdafd safdsf
+1557069543963:help
+1557069549825:answer-poll 1
+1557073505309:init-shell-user
+1557073510971:create-poll p l
+1557129184830:help
+1557129191876:init-shell-user
+1557129221145:create-poll Important 'Dimon loh?'
+1557129974646:init-shell-user
+1557149382662:help
+1557149469288:init-shell-user
+1557149478604:add-censor-phrase java
+1557149518459:send-message 'i love java (no)'
+1557149794257:init-shell-user
+1557149800834:add-censor-phrase java
+1557149808393:send-message i love java
+1557149822787:send-message 'i love java'
+1557149900562:init-shell-user
+1557149908291:add-censor-phrase java
+1557149916869:send-message 'i love java'
+1557149922109:print-all-messages
+1557149939522:send-message 'i love java'
+1557150171208:init-shell-user
+1557150178947:add-censor-phrase java
+1557150189966:send-message 'i love java'
+1557150194815:print-all-messages
+1557150207091:send-message 'i love java '
+1557150212910:print-all-messages
+1557150431808:init-shell-user
+1557150438814:add-censor-phrase java
+1557150446963:send-message 'i love java'
+1557150456627:print-all-messages
+1557150646124:init-shell-user
+1557150655190:add-censor-phrase java
+1557150662489:send-message 'i love java'
+1557150667860:print-all-messages
+1557150682712:send-message 'i love JAVA jAvA'
+1557150687624:print-all-messages
+1557152325827:init-shell-user
+1557152426457:create-poll PollTitle PollContent
+1557152525190:send-message message1
+1557152566581:print-all-messages
