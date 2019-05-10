@@ -34,7 +34,7 @@ public class ChatServiceImpl implements ChatService {
     @Override
     public void sendMessage(Long userId, String message) {
         User dbUser = getUserById(userId);
-        if(dbUser == null) {
+        if (dbUser == null) {
             return;
         }
 
@@ -51,7 +51,7 @@ public class ChatServiceImpl implements ChatService {
     public List<InnerMessage> getAllMessages() {
         List<Message> messages = messageRepository.findAll();
         List<InnerMessage> innerMessages = new ArrayList<>();
-        for(Message message : messages) {
+        for (Message message : messages) {
             innerMessages.add(new InnerMessage(message));
         }
         return innerMessages;
@@ -72,7 +72,7 @@ public class ChatServiceImpl implements ChatService {
         String passwordMd5 = Md5Manager.getMd5(password);
         Optional<User> optionalUser = userRepository.findByNameAndPassword(name, passwordMd5);
 
-        if(!optionalUser.isPresent())
+        if (!optionalUser.isPresent())
             return null;
 
         User dbUser = optionalUser.get();
@@ -82,7 +82,7 @@ public class ChatServiceImpl implements ChatService {
     @Override
     public void createPoll(Long userId, String title, String text) {
         User dbUser = getUserById(userId);
-        if(dbUser == null)
+        if (dbUser == null)
             return;
 
         Poll poll = new Poll();
@@ -95,11 +95,11 @@ public class ChatServiceImpl implements ChatService {
     @Override
     public void answerPoll(Long userId, Long pollId, boolean vote) {
         User dbUser = getUserById(userId);
-        if(dbUser == null)
+        if (dbUser == null)
             return;
 
         Poll dbPoll = getPollById(pollId);
-        if(dbPoll == null)
+        if (dbPoll == null)
             return;
 
         PollAnswer pollAnswer = new PollAnswer();
@@ -113,7 +113,7 @@ public class ChatServiceImpl implements ChatService {
     public List<InnerPoll> getAllPolls() {
         List<Poll> polls = pollRepository.findAll();
         List<InnerPoll> innerPolls = new ArrayList<>();
-        for(Poll poll : polls) {
+        for (Poll poll : polls) {
             innerPolls.add(new InnerPoll(poll));
         }
         return innerPolls;
@@ -122,6 +122,22 @@ public class ChatServiceImpl implements ChatService {
     @Override
     public void addCensorPhrase(String phrase) {
         censorManager.addCensorPhrase(phrase);
+    }
+
+    @Override
+    public List<InnerPollAnswer> getPollAnswers(Long userId) {
+        Optional<List<PollAnswer>> optionalPollAnswer = pollAnswerRepository.findAllByUserId(userId);
+        if(!optionalPollAnswer.isPresent())
+            return null;
+
+        List<PollAnswer> pollAnswers = optionalPollAnswer.get();
+
+        List<InnerPollAnswer> innerPollAnswers = new ArrayList<>();
+        for (PollAnswer pollAnswer : pollAnswers) {
+            innerPollAnswers.add(new InnerPollAnswer(pollAnswer));
+        }
+
+        return innerPollAnswers;
     }
 
     private User getUserById(Long id) {

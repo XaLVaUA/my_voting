@@ -1,8 +1,6 @@
 package com.yasoft.voting.services;
 
-import com.yasoft.voting.models.InnerMessage;
-import com.yasoft.voting.models.InnerPoll;
-import com.yasoft.voting.models.InnerUser;
+import com.yasoft.voting.models.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,4 +15,5 @@ public interface ChatService {
     void answerPoll(Long userId, Long pollId, boolean vote);
     List<InnerPoll> getAllPolls();
     void addCensorPhrase(String phrase);
+    List<InnerPollAnswer> getPollAnswers(Long userId);
 }

@@ -44,7 +44,7 @@ public class PollAnswer {
         this.user = user;
     }
 
-    public boolean isVote() {
+    public boolean getVote() {
         return vote;
     }
 

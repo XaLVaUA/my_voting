@@ -145,3 +145,39 @@
 1557152426457:create-poll PollTitle PollContent
 1557152525190:send-message message1
 1557152566581:print-all-messages
+1557162772297:init-shell-user
+1557165321437:create-poll Poll1 Yes/no?
+1557165622055:help
+1557165628950:create-poll aaa bbb
+1557213488197:init-shell-user
+1557213898921:help
+1557213909950:add-censor-phrase roma
+1557231081704:init-shell-user
+1557231089601:add-censor-phrase roma
+1557396636875:init-shell-user
+1557398160601:help
+1557398175384:create-poll loh pidar
+1557398186652:answer-poll 1
+1557405467219:init-sehll-user
+1557405472282:init-shell-user
+1557405474009:help
+1557405484472:create-poll dima loh?
+1557405668894:init-shell-user
+1557405676695:create-poll dima loh?
+1557405683155:answer-poll 1
+1557405812239:init-shell-user
+1557405818001:create-poll dima loh?
+1557405900064:answer-poll 1
+1557509812118:init-shell-user
+1557509821016:create-poll title text
+1557510152592:init-shell-user
+1557510158652:create-poll title text
+1557511130384:init-shell-user
+1557511136559:create-poll title text
+1557511358294:init-shell-user
+1557511363198:create-poll title text
+1557511550312:init-shell-user
+1557511555668:create-poll title text
+1557511685417:create-poll aa bb
+1557511881443:init-shell-user
+1557511891005:create-poll aaa bbb
