@@ -181,3 +181,9 @@
 1557511685417:create-poll aa bb
 1557511881443:init-shell-user
 1557511891005:create-poll aaa bbb
+1557515354736:init-shell-user
+1557515359686:send-message aaa
+1557515457931:create-poll www qq
+1557517388276:init-shell-user
+1557517394663:help
+1557517405217:add-censor-phrase java
