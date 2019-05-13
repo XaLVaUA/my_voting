@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class CensorManager {
@@ -29,7 +30,7 @@ public class CensorManager {
         for(CensorPhrase phrase : censorPhrases) {
             String phraseStr = phrase.getPhrase();
             String regex = "(?i)" + phraseStr;
-            validString = str.replaceAll(regex, getMarkString(phraseStr.length()));
+            validString = validString.replaceAll(regex, getMarkString(phraseStr.length()));
         }
         return validString;
     }
@@ -47,5 +48,9 @@ public class CensorManager {
             sb.append(mark);
         }
         return sb.toString();
+    }
+
+    public List<CensorPhrase> getAllCensorPhrases() {
+        return censorPhraseRepository.findAll();
     }
 }

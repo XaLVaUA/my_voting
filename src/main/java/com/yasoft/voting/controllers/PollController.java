@@ -20,8 +20,8 @@ public class PollController {
 
     @CrossOrigin(origins = { "http://localhost:4200" })
     @PostMapping("create")
-    public void createPoll(@RequestParam Long userId, @RequestParam String title, @RequestParam String text) {
-        pollService.createPoll(userId, title, text);
+    public void createPoll(@RequestParam Long userId, @RequestParam String text) {
+        pollService.createPoll(userId, text);
     }
 
     @CrossOrigin(origins = { "http://localhost:4200" })

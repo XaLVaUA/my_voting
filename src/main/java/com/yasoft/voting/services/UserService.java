@@ -7,6 +7,7 @@ import com.yasoft.voting.utils.Md5Manager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.Optional;
 
 @Service
@@ -19,6 +20,10 @@ public class UserService {
     }
 
     public void createUser(String name, String password, int level) {
+        if(userRepository.findByNameAndPassword(name, password).isPresent()) {
+            return;
+        }
+
         User user = new User();
         user.setName(name);
         String passwordMd5 = Md5Manager.getMd5(password);

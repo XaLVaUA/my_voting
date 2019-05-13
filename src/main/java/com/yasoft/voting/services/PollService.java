@@ -25,17 +25,15 @@ public class PollService {
         this.censorService = censorService;
     }
 
-    public void createPoll(Long userId, String title, String text) {
+    public void createPoll(Long userId, String text) {
         User dbUser = userService.findUser(userId);
         if (dbUser == null)
             return;
 
-        String validTitle = censorService.getValidString(title);
         String validText = censorService.getValidString(text);
 
         Poll poll = new Poll();
         poll.setUser(dbUser);
-        poll.setTitle(validTitle);
         poll.setText(validText);
         pollRepository.save(poll);
     }

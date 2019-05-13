@@ -44,7 +44,7 @@ public class ShellManager {
 
     @ShellMethod("create-user")
     public void createUser(String name, String password) {
-        userController.createUser(name, password);
+        userController.createAdmin(name, password);
     }
 
     @ShellMethod("login-user")
@@ -57,8 +57,8 @@ public class ShellManager {
     }
 
     @ShellMethod("create-poll")
-    public void createPoll(String title, String text) {
-        pollController.createPoll(user.getId(), title, text);
+    public void createPoll(String text) {
+        pollController.createPoll(user.getId(), text);
     }
 
     @ShellMethod("answer-poll")
@@ -76,6 +76,6 @@ public class ShellManager {
 
     @ShellMethod("add-censor-phrase")
     public void addCensorPhrase(String phrase) {
-        censorController.addCensorPhrase(phrase);
+        censorController.addCensorPhrase(user.getId(), phrase);
     }
 }

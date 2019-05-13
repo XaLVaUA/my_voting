@@ -3,24 +3,22 @@ package com.yasoft.voting.models;
 public class InnerPoll {
     private Long id;
     private InnerUser user;
-    private String title;
     private String text;
     private int trueVotes;
     private int falseVotes;
 
     public InnerPoll() { }
 
-    public InnerPoll(Long id, InnerUser user, String title, String text, int trueVotes, int falseVotes) {
+    public InnerPoll(Long id, InnerUser user, String text, int trueVotes, int falseVotes) {
         this.id = id;
         this.user = user;
-        this.title = title;
         this.text = text;
         this.trueVotes = trueVotes;
         this.falseVotes = falseVotes;
     }
 
     public InnerPoll(Poll dbPoll) {
-        this(dbPoll.getId(), new InnerUser(dbPoll.getUser()), dbPoll.getTitle(), dbPoll.getText(), dbPoll.getTrueVotes(), dbPoll.getFalseVotes());
+        this(dbPoll.getId(), new InnerUser(dbPoll.getUser()), dbPoll.getText(), dbPoll.getTrueVotes(), dbPoll.getFalseVotes());
     }
 
     public Long getId() {
@@ -37,14 +35,6 @@ public class InnerPoll {
 
     public void setUser(InnerUser user) {
         this.user = user;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getText() {

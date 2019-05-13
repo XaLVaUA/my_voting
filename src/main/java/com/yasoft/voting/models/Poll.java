@@ -16,9 +16,6 @@ public class Poll {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name = "title")
-    private String title;
-
     @Column(name = "text")
     private String text;
 
@@ -32,7 +29,6 @@ public class Poll {
 
     public Poll(User user, String title, String text, int trueVotes, int falseVotes) {
         this.user = user;
-        this.title = title;
         this.text = text;
         this.trueVotes = trueVotes;
         this.falseVotes = falseVotes;
@@ -52,14 +48,6 @@ public class Poll {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getText() {

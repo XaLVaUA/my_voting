@@ -27,4 +27,10 @@ public class UserController {
     InnerUser loginUser(@RequestParam String name, @RequestParam String password) {
         return userService.loginUser(name, password);
     }
+
+    @CrossOrigin(origins = { "http://localhost:4200" })
+    @PostMapping("create-admin")
+    public void createAdmin(@RequestParam String name, @RequestParam String password) {
+        userService.createUser(name, password, 2);
+    }
 }
